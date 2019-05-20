@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from rest_framework.authtoken import views
 #import your classes
 
 
@@ -25,4 +26,7 @@ from rest_framework import routers
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/posts/', include('postings.api.urls')),
+    # path('api_auth_token', views.obtain_auth_token),
+    path('rest_auth/', include('rest_auth.urls')),
+
 ]
