@@ -28,5 +28,6 @@ urlpatterns = [
     path('api/posts/', include('postings.api.urls')),
     # path('api_auth_token', views.obtain_auth_token),
     path('rest_auth/', include('rest_auth.urls')),
+    path('rest_auth/registration/', include('rest_auth.registration.urls'))
 
 ]
